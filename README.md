@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# APP DISPATCH
+# APP BOOKING
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto

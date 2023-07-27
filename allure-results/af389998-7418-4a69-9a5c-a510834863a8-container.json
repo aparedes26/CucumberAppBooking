@@ -1,0 +1,1 @@
+{"uuid":"af389998-7418-4a69-9a5c-a510834863a8","name":"CucumberAppBooking","children":["67aee4a5-88c6-4738-a1c4-4628c36102bb"],"befores":[{"name":"startAppium","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1690080777199,"stop":1690080795220}],"afters":[],"start":1690080777171,"stop":1690080835431}

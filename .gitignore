@@ -1,0 +1,37 @@
+# Maven
+target
+
+# TestNG
+test-output
+report
+
+# Eclipse
+.metadata
+.settings
+.classpath
+.project
+
+# IntelliJ IDEA
+.idea
+*.iml
+
+# VSCODE
+.vscode
+.vscode/
+.vscode/*
+
+# Windows
+RemoteSystemsTempFiles
+
+# Mac
+.DS_Store
+/bin/
+
+# Allure
+allure-reportrs
+
+# Keep .gitkeep files
+!/**/.gitkeep
+
+# otros
+debug.log

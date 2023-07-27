@@ -1,0 +1,71 @@
+image: maven:3.8.5-openjdk-8-slim
+
+# Stages in pipeline:
+stages:
+  - maven
+  - suite
+  - preliminar
+
+# Stages maven:
+maven:
+  image: maven:3.8.5-openjdk-8-slim
+  stage: maven
+  tags:
+    - dfl-runner-quality-assurance
+  script:
+    - mvn install -DskipTests -s ci_settings.xml
+
+#Smoke-Suite:
+#  image: maven:3.8.5-openjdk-8-slim
+#  stage: suite
+#  needs: ["maven"]
+#  tags:
+#    - dfl-runner-quality-assurance
+#  script:
+#    - mvn install -DskipTests -s ci_settings.xml
+#  artifacts:
+#    reports:
+#      junit:
+#        - target/surefire-reports/TEST-*.xml
+#    expire_in: 5 days
+#    when: always
+#  only:
+#    refs:
+#      - main
+
+#Regression-Suite:
+#  image: maven:3.8.5-openjdk-8-slim
+#  stage: suite
+#  needs: ["maven"]
+#  tags:
+#    - dfl-runner-quality-assurance
+#  script:
+#    - mvn install -DskipTests -s ci_settings.xml
+#  artifacts:
+#    reports:
+#      junit:
+#        - target/surefire-reports/TEST-*.xml
+#    expire_in: 5 days
+#    when: always
+#  only:
+#    refs:
+#      - main
+
+#Test-Fix:
+#  image: maven:3.8.5-openjdk-8-slim
+#  stage: preliminar
+#  needs: ["maven"]
+#  tags:
+#    - dfl-runner-quality-assurance
+#  script:
+#    - mvn install -DskipTests -s ci_settings.xml
+#  artifacts:
+#    paths:
+#      - report
+#    expire_in: 5 days
+#   when: always
+#  only:
+#    refs:
+#      - test
+#      - fix
+#      - fix1
